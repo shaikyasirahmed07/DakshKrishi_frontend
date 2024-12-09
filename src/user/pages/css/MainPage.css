@@ -1,0 +1,141 @@
+/* MainPage.css */
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 30px 40px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3a6f47; /* Earthy green for farmers */
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.farmer-button {
+  background-color: #3a6f47; /* Earthy green */
+  color: white;
+}
+
+.user-button {
+  background-color: #4d93d1; /* Blue */
+  color: white;
+}
+
+.admin-button {
+  background-color: #d79e16; /* Golden yellow */
+  color: white;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.farmer-button:hover {
+  background-color: #2e5d36;
+}
+
+.user-button:hover {
+  background-color: #3570a9;
+}
+
+.admin-button:hover {
+  background-color: #c79b14;
+}
+/* Form Container */
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Input Fields */
+.form-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+/* Success and Error Messages */
+.error {
+  color: red;
+  font-size: 0.9rem;
+}
+
+.success {
+  color: green;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  max-width: 300px;
+}

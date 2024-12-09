@@ -1,0 +1,100 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 10px;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px 30px;
+  width: 300%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* More specific styling for h2 */
+.login-box h2 {
+  font-size: 1.8rem;
+  color: #3a6f47 !important; /* Apply green color and force the specificity */
+  margin-bottom: 15px;
+}
+.login-box h4 {
+  font-size: 1.5rem;
+  color: #3a6f47 !important; /* Apply green color and force the specificity */
+  margin-bottom: 15px;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.85rem;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 20px 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  align-self: center;
+  border: none;
+  cursor: pointer;
+  background-color: #3a6f47;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2e5d36;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
