@@ -12,7 +12,7 @@ const CartPage = () => {
 
   const fetchCartItems = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/api/cart/${userId}`);
+      const response = await fetch(`https://dakshkrish-backend-production.up.railway.app/api/cart/${userId}`);
       if (response.ok) {
         const data = await response.json();
         setCartItems(data);
@@ -35,7 +35,7 @@ const CartPage = () => {
           {cartItems.map((item) => (
             <div className="cart-item" key={item.id}>
               <img
-                src={`http://localhost:8080/${item.product.imageUrl || 'default-image.jpg'}`}
+                src={`https://dakshkrish-backend-production.up.railway.app/${item.product.imageUrl || 'default-image.jpg'}`}
                 alt={item.product.name}
                 className="cart-item-image"
               />

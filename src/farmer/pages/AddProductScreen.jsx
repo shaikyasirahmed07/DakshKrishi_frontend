@@ -24,7 +24,7 @@ const AddProductScreen = () => {
   const fetchProducts = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch(`http://localhost:8080/api/farmers/${farmerId}/products`);
+      const response = await fetch(`https://dakshkrish-backend-production.up.railway.app/api/farmers/${farmerId}/products`);
       if (response.ok) {
         const data = await response.json();
         setProducts(data);
@@ -78,7 +78,7 @@ const AddProductScreen = () => {
       formData.append('category', product.category);
       formData.append('image', product.image);
 
-      const response = await fetch(`http://localhost:8080/api/farmers/${farmerId}/add-product`, {
+      const response = await fetch(`https://dakshkrish-backend-production.up.railway.app/api/farmers/${farmerId}/add-product`, {
         method: 'POST',
         body: formData,
       });

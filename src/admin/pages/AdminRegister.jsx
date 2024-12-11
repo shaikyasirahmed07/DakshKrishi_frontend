@@ -20,7 +20,7 @@ const AdminRegister = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8080/api/admin/signup', {
+      const response = await fetch('https://dakshkrish-backend-production.up.railway.app/api/admin/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

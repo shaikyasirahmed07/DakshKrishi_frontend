@@ -21,7 +21,7 @@ const SoldProductsPage = () => {
 
   const fetchSoldProducts = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/api/farmers/sold-products/${farmerId}`);
+      const response = await fetch(`https://dakshkrish-backend-production.up.railway.app/api/farmers/sold-products/${farmerId}`);
       if (response.ok) {
         const data = await response.json();
         setSoldProducts(data);
@@ -42,7 +42,7 @@ const SoldProductsPage = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:8080/api/farmers/sold-products/${farmerId}`, {
+      const response = await fetch(`https://dakshkrish-backend-production.up.railway.app/api/farmers/sold-products/${farmerId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newSoldProduct),

@@ -19,7 +19,7 @@ const FarmerProfilePage = () => {
 
   const fetchProfile = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/api/farmers/${farmerId}/profile`);
+      const response = await fetch(`https://dakshkrish-backend-production.up.railway.app/api/farmers/${farmerId}/profile`);
       if (response.ok) {
         const data = await response.json();
         setProfile(data);
@@ -61,7 +61,7 @@ const FarmerProfilePage = () => {
     if (formData.farmImage) data.append('farmImage', formData.farmImage);
 
     try {
-      const response = await fetch(`http://localhost:8080/api/farmers/${farmerId}/profile`, {
+      const response = await fetch(`https://dakshkrish-backend-production.up.railway.app/api/farmers/${farmerId}/profile`, {
         method: 'POST',
         body: data,
       });

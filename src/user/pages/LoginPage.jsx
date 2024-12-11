@@ -15,7 +15,7 @@ const LoginPage = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8080/api/users/login', {
+      const response = await fetch('https://dakshkrish-backend-production.up.railway.app/api/users/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

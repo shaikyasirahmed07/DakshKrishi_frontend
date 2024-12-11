@@ -25,7 +25,7 @@ const FarmerHomePage = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/api/farmers/${farmerId}/products`);
+      const response = await fetch(`https://dakshkrish-backend-production.up.railway.app/api/farmers/${farmerId}/products`);
       if (response.ok) {
         const data = await response.json();
         setProducts(data);
@@ -46,7 +46,7 @@ const FarmerHomePage = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:8080/api/farmers/${farmerId}/delete-product/${productId}`,
+        `https://dakshkrish-backend-production.up.railway.app/api/farmers/${farmerId}/delete-product/${productId}`,
         { method: 'DELETE' }
       );
       if (response.ok) {
@@ -125,7 +125,7 @@ const FarmerHomePage = () => {
             {filteredProducts.map((product) => (
               <div className="product-card" key={product.id}>
                 <img
-                  src={`http://localhost:8080/${product.imageUrl || 'default-image-path.jpg'}`}
+                  src={`https://dakshkrish-backend-production.up.railway.app/${product.imageUrl || 'default-image-path.jpg'}`}
                   alt={product.name}
                   className="product-image"
                 />

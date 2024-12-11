@@ -22,7 +22,7 @@ const HomePage = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/users/products');
+      const response = await fetch('https://dakshkrish-backend-production.up.railway.app/api/users/products');
       if (response.ok) {
         const data = await response.json();
         setProducts(data);
@@ -49,7 +49,7 @@ const HomePage = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:8080/api/cart/add', {
+      const response = await fetch('https://dakshkrish-backend-production.up.railway.app/api/cart/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(cartItem),
@@ -100,7 +100,7 @@ const HomePage = () => {
                   <img
                     src={
                       product.imageUrl
-                        ? `http://localhost:8080/${product.imageUrl}`
+                        ? `https://dakshkrish-backend-production.up.railway.app/${product.imageUrl}`
                         : 'https://via.placeholder.com/150'
                     }
                     alt={product.name}

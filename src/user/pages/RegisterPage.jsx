@@ -24,7 +24,7 @@ const RegisterPage = () => {
   // Check email availability before submitting the form
   const checkEmailExists = async (email) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/users/check-email?email=${email}`);
+      const response = await fetch(`https://dakshkrish-backend-production.up.railway.app/api/users/check-email?email=${email}`);
       const data = await response.json();
       return data.exists;
     } catch (err) {
@@ -47,7 +47,7 @@ const RegisterPage = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:8080/api/users/register', {
+      const response = await fetch('https://dakshkrish-backend-production.up.railway.app/api/users/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

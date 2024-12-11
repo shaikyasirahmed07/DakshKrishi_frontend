@@ -29,7 +29,7 @@ function FarmerRegister() {
     setSuccess(null);
 
     try {
-      const response = await fetch('http://localhost:8080/api/farmers/farmer-register', {
+      const response = await fetch('https://dakshkrish-backend-production.up.railway.app/api/farmers/farmer-register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

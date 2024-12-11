@@ -23,7 +23,7 @@ const EditProductPage = () => {
 
   const fetchProductDetails = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/api/farmers/${farmerId}/products/${productId}`);
+      const response = await fetch(`https://dakshkrish-backend-production.up.railway.app/api/farmers/${farmerId}/products/${productId}`);
       if (response.ok) {
         const data = await response.json();
         setProduct(data);
@@ -45,7 +45,7 @@ const EditProductPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:8080/api/farmers/${farmerId}/edit-product/${productId}`, {
+      const response = await fetch(`https://dakshkrish-backend-production.up.railway.app/api/farmers/${farmerId}/edit-product/${productId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(product),

@@ -15,7 +15,7 @@ const FarmerLogin = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8080/api/farmers/farmer-login', {
+      const response = await fetch('https://dakshkrish-backend-production.up.railway.app/api/farmers/farmer-login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

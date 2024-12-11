@@ -26,7 +26,7 @@ const AdminDashboard = () => {
   const fetchFarmers = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:8080/api/admin/farmers', {
+      const response = await fetch('https://dakshkrish-backend-production.up.railway.app/api/admin/farmers', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -52,7 +52,7 @@ const AdminDashboard = () => {
   const handleApprove = async (farmerId) => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:8080/api/admin/farmers/approve/${farmerId}`, {
+      const response = await fetch(`https://dakshkrish-backend-production.up.railway.app/api/admin/farmers/approve/${farmerId}`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -83,7 +83,7 @@ const AdminDashboard = () => {
   const handleDelete = async (farmerId) => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:8080/api/admin/farmers/${farmerId}`, {
+      const response = await fetch(`https://dakshkrish-backend-production.up.railway.app/api/admin/farmers/${farmerId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -110,7 +110,7 @@ const AdminDashboard = () => {
   const fetchFarmerDetails = async (farmerId) => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:8080/api/admin/farmers/${farmerId}`, {
+      const response = await fetch(`https://dakshkrish-backend-production.up.railway.app/api/admin/farmers/${farmerId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -136,7 +136,7 @@ const AdminDashboard = () => {
   const fetchFarmerProducts = async (farmerId) => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:8080/api/farmers/${farmerId}/products`, {
+      const response = await fetch(`https://dakshkrish-backend-production.up.railway.app/api/farmers/${farmerId}/products`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

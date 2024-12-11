@@ -12,7 +12,7 @@ const OrdersPage = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/api/orders/${userId}`);
+      const response = await fetch(`https://dakshkrish-backend-production.up.railway.app/api/orders/${userId}`);
       const data = await response.json();
       setOrders(data);
     } catch {
